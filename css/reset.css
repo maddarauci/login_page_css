@@ -1,0 +1,74 @@
+/* box sizing rules 
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* remove default padding */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* remove default margins */
+body,
+h1,h2,h3,h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* set core body defaults */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/*  remove list style on ul, ol elemnets with */
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* a element that dont have a class get defaults */
+a:not(class) {
+    text-decoration-skip-ink: auto;
+}
+
+/* make images easier to work with */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* natural flow and rythm in articles by default*/
+article > * + * {
+    margin-top: 1em;
+}
+
+/* inherit font for input and buttons */
+input, button, textarea,
+select {
+    font: inherit;
+}
+
+/*  remove all animations and transitions for p*/
+@media (prefers-reduce-motion: reduce) {
+    * {
+        animation-duration: 0..1ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
